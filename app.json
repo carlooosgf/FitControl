@@ -2,6 +2,7 @@
   "expo": {
     "name": "FitControl",
     "slug": "FitControl",
+    "scheme": "fitcontrol",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,16 +14,37 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.anonymous.FitControl",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.FitControl",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3585df58-32b4-4cf0-bb8f-262a56c7c32c"
+      }
+    },
+    "owner": "carlosgf02",
+    "updates": {
+      "url": "https://u.expo.dev/3585df58-32b4-4cf0-bb8f-262a56c7c32c"
     }
   }
 }
